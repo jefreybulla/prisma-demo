@@ -3,15 +3,10 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-    const post = await prisma.post.create({
-        data: {
-            title: 'Hello World from author 2',
-            content: 'This is a draft',
-            //published: false,
-            authorId: 2
-        }
-    })
-    console.log(post)
+    const prismaMigratePosts = await prisma.post.findMany({
+        where: { title: { contains: "Hello" } },
+      })
+    console.log(prismaMigratePosts);
 }
 
 main()
