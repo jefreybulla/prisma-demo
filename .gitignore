@@ -3,6 +3,9 @@
 # environment variables
 .env
 
+# database
+/prisma/dev.db
+
 # compiled output
 dist
 tmp
