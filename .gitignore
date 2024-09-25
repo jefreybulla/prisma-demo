@@ -4,7 +4,7 @@
 .env
 
 # database
-/prisma/dev.db
+prisma/dev.db
 
 # compiled output
 dist
